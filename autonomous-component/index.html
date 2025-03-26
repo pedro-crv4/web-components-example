@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <style>
+        .expandable-holder {
+            display: block;
+            --expandable-padding: 24px;
+            position: relative;
+            border: solid 1px #ddd;
+            padding: 0 var(--expandable-padding);
+            border-radius: 5px;
+            overflow: hidden;
+            transition: height .3s;
+        }
+
+        .expandable-holder ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .expandable-holder[expanded="false"] {
+            height: 55px !important;
+        }
+
+        .expandable-holder .title {
+            padding: 17px 0;
+            margin-bottom: 0;
+        }
+
+        .expandable-holder li:last-child {
+            margin-bottom: 17px;
+        }
+
+        .expandable-holder li a {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <expandable-element class="expandable-holder" expanded="false">
+        <div class="title flex -between -vcenter">
+            <span>Categorias</span>
+        </div>
+        <ul>
+            <li><a href="#">Cama</a></li>
+            <li><a href="#">Mesa</a></li>
+            <li><a href="#">Cortinas</a></li>
+            <li><a href="#">Travesseiros</a></li>
+        </ul>
+    </expandable-element>
+</body>
+
+</html>
