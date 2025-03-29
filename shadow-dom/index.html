@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            color: #333;
+            padding: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #CCC;
+            border-radius: 5px;
+            margin: 8px 0;
+        }
+
+        button {
+            margin-top: 16px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:active {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="host"></div>
+    <span>Eu estou no DOM</span>
+
+    <div id="shadow">
+        <template shadowrootmode="open">
+            <style>
+                span {
+                    display: inline-block;
+                    color: #503296;
+                    border-radius: 5px;
+                    background-color: #DDD;
+                    padding: 5px;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            </style>
+
+            <span>Eu também estou no shadow DOM</span>
+        </template>
+    </div>
+
+    <button id="upper" type="button">Deixar em maiúsculas</button>
+    <script src="main.js"></script>
+</body>
+
+</html>

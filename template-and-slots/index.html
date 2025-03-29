@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <template id="custom-paragraph-template">
+        <style>
+            p {
+                color: white;
+                background-color: #666;
+                padding: 5px;
+            }
+        </style>
+        <p>
+            <slot name="my-text">Meu texto padrão</slot>
+        </p>
+    </template>
+
+    <my-paragraph>
+        <p slot="my-text">Meu parágrafo</p>
+    </my-paragraph>
+</body>
+
+</html>
