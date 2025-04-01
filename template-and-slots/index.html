@@ -7,6 +7,12 @@
     <title>Document</title>
 
     <script src="main.js"></script>
+    <style>
+        expandable-element a {
+            color: #5f36bf;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,6 +32,74 @@
     <my-paragraph>
         <p slot="my-text">Meu parágrafo</p>
     </my-paragraph>
+
+    <my-paragraph></my-paragraph>
+
+    <!-- <template id="expandable-template">
+        <style>
+            .expandable {
+                display: block;
+                border: solid 1px #ddd;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            .expandable .title {
+                padding: 15px;
+                background: #856ce1;
+                color: #222;
+                cursor: pointer;
+                font-weight: bold;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .expandable .content {
+                padding: 15px;
+                display: none;
+            }
+
+            ::slotted(ul) {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                font-family: 'Rubik', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #ffffff;
+            }
+
+            ::slotted(ul > li > a) {
+                text-decoration: none;
+                color: #503296;
+            }
+
+            .expandable.expanded .content {
+                display: block;
+            }
+        </style>
+
+        <div class="expandable">
+            <div class="title">
+                <slot name="title">Título</slot>
+            </div>
+            <div class="content">
+                <slot></slot>
+            </div>
+        </div>
+    </template>
+
+    <expandable-element>
+        <span slot="title">Categorias</span>
+        <ul>
+            <li><a href="#">Cama</a></li>
+            <li><a href="#">Mesa</a></li>
+            <li><a href="#">Cortinas</a></li>
+            <li><a href="#">Travesseiros</a></li>
+        </ul>
+    </expandable-element>
+
+    <expandable-element style="display: block; margin-top: 16px;">
+        <span slot="title">Opções</span>
+        <p>Texto personalizado aqui.</p>
+    </expandable-element> -->
 </body>
 
 </html>

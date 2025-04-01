@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <counter-component></counter-component>
+    <counter-component title="Meu contador" count="5"></counter-component>
 
     <script>
         const counter = document.querySelector('counter-component');
         counter.addEventListener('update-count', (e) => {
             const count = e.detail[0];
 
-            if (count > 10) {
+            if (count >= 10) {
                 alert('Você chegou ao limite da contagem.');
             }
         })
