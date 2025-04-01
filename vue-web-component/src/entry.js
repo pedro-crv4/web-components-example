@@ -1,3 +1,6 @@
-import Counter from "./components/Counter.vue";
+import { defineCustomElement } from "vue";
+import CounterComponent from "./CounterComponent.ce.vue";
 
-customElements.define("counter-component", Counter);
+const CounterElement = defineCustomElement(CounterComponent);
+
+customElements.define("counter-component", CounterElement);

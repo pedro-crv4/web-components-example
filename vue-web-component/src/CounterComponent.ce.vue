@@ -7,28 +7,32 @@
     </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
+<script>
+import { ref } from "vue";
 
-const emit = defineEmits(['update-count']);
-
-const props = defineProps({
-    title: String,
-    count: {
-        type: Number,
-        default: 0,
+export default {
+    props: {
+        title: String,
+        count: {
+            type: Number,
+            default: 0,
+        },
     },
-});
-
-const counter = ref(props.count);
-
-const increment = () => {
-    counter.value++;
-    emit("update-count", counter.value);
+    emits: ["update-count"],
+    setup(props, { emit }) {
+        const counter = ref(props.count);
+        
+        const increment = () => {
+            counter.value++;
+            emit("update-count", counter.value);
+        };
+        
+        return { counter, increment };
+    },
 };
 </script>
 
-<style lang="css" scoped>
+<style>
 .container {
     border: 2px solid #333;
     padding: 16px;

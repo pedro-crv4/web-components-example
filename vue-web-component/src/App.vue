@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import Counter from './components/Counter.vue';
+import Counter from './CounterComponent.ce.vue';
 </script>
 
 <style lang="scss" scoped>
