@@ -1,0 +1,12 @@
+:root {
+    --r-main-font-size: 30px;
+    --r-heading2-size: 3rem;
+}
+
+.reveal .slides {
+    text-align: left;
+}
+
+.reveal pre code {
+    max-height: 100vh;
+}
