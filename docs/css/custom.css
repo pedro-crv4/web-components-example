@@ -1,0 +1,18 @@
+:root {
+    --r-main-font: "Red Hat Display", sans-serif;
+    --r-heading-font: "Red Hat Display", sans-serif;
+    --r-main-font-size: 30px;
+    --r-heading2-size: 3rem;
+}
+
+.reveal .slides {
+    text-align: left;
+}
+
+.reveal code {
+    color: var(--r-link-color-dark);
+}
+
+.reveal pre code {
+    max-height: 100vh;
+}

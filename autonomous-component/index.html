@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <style>
+        .expandable-holder {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            --expandable-padding: 24px;
+            position: relative;
+            border: 1px solid #e0e0e0;
+            padding: 0 var(--expandable-padding);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: height 0.3s ease-in-out;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: 'Rubik', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .expandable-holder ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .expandable-holder[expanded="false"] {
+            height: 60px !important;
+        }
+
+        .expandable-holder .title {
+            padding: 20px 0;
+            margin-bottom: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .expandable-holder .title::after {
+            content: '▼';
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .expandable-holder[expanded="false"] .title::after {
+            transform: rotate(180deg);
+        }
+
+        .expandable-holder li {
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 6px;
+            margin-top: 6px;
+        }
+
+        .expandable-holder li:last-child {
+            margin-bottom: 20px;
+            border-bottom: none;
+        }
+
+        .expandable-holder li a {
+            display: block;
+            padding: 8px 0;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .expandable-holder li a:hover {
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+
+<body>
+    <expandable-element class="expandable-holder" expanded="false">
+        <div class="title flex -between -vcenter">
+            <span>Categorias</span>
+        </div>
+        <ul>
+            <li><a href="#">Cama</a></li>
+            <li><a href="#">Mesa</a></li>
+            <li><a href="#">Cortinas</a></li>
+            <li><a href="#">Travesseiros</a></li>
+        </ul>
+    </expandable-element>
+</body>
+
+</html>
